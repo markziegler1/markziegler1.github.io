@@ -1,47 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
 
-    <style>
-        .btn {
-            display: inline-block;
-            font-size: 50px;
-            margin: 20px 2px;
-            cursor: pointer;
-            text-align: center;
-            text-decoration: none;
-            outline: none;
-            color: #fff;
-            background-color: #003477;
-            border: none;
-            border-radius: 15px;
-            padding: 10px 24px;
-            transition: all 0.3s;
-        }
+    <title>Title</title>
 
-        .btn:hover {background-color: #3e6a8e
-        }
-
-        .btn:active {
-            background-color: #3e8e41;
-            box-shadow: 0 5px #666;
-            transform: translateY(4px);
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navstyle.css">
+    <script defer src="app.js"></script>
 </head>
 <body>
+<nav class="navbar">
+    <div class="navbar-container container">
+        <input type="checkbox" name="" id="">
+        <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+        </div>
+        <ul class="menu-items">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#food">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>
 
-    
 
-<a href="https://danskebank.dk/privat" class="btn">Danske Bank</a>
-<a href="https://www.borger.dk/" class="btn">Borger.dk</a>
-<a href="https://www.e-boks.com/danmark/da" class="btn">E-boks</a>
-<a href="https://www.sundhed.dk/" class="btn">Sundhed.dk</a>
-<a href="https://www.aeldresagen.dk/" class="btn">Ældresagen</a>
-<a href="https://www.dr.dk/nyheder" class="btn">DR Nyheder</a>
-<a href="https://www.rejseplanen.dk/" class="btn">Rejseplanen</a>
-<a href="https://www.duka.dk/" class="btn">Duka</a>
+
+<section id="food">
+    <h2>Welcome</h2>
+    <div class="food-container container">
+        <div class="food-type fruite">
+            <div class="img-container">
+                <img src="https://i.postimg.cc/yxThVPXk/food1.jpg" alt="error" />
+                <div class="img-content">
+                    <h3>fruite</h3>
+                    <a
+                            href="https://en.wikipedia.org/wiki/Fruit"
+                            class="btn btn-primary"
+                            target="blank"
+                    >learn more</a
+                    >
+                </div>
+            </div>
+        </div>
+        <div class="food-type vegetable">
+            <div class="img-container">
+                <img src="https://i.postimg.cc/Nffm6Rkk/food2.jpg" alt="error" />
+                <div class="img-content">
+                    <h3>vegetable</h3>
+                    <a
+                            href="https://en.wikipedia.org/wiki/Vegetable"
+                            class="btn btn-primary"
+                            target="blank"
+                    >learn more</a
+                    >
+                </div>
+            </div>
+        </div>
+        <div class="food-type grin">
+            <div class="img-container">
+                <img src="https://i.postimg.cc/76ZwsPsd/food3.jpg" alt="error" />
+                <div class="img-content">
+                    <h3>grin</h3>
+                    <a
+                            href="https://en.wikipedia.org/wiki/Grain"
+                            class="btn btn-primary"
+                            target="blank"
+                    >learn more</a
+                    >
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="food-menu">
+    <h2 class="food-menu-heading">Food Menu</h2>
+    <div class="food-menu-container container">
+        <div class="food-menu-item">
+            <div class="food-img">
+                <img src="https://i.postimg.cc/wTLMsvSQ/food-menu1.jpg" alt="" />
+            </div>
+            <div class="food-description">
+                <h2 class="food-titile">Food Menu Item 1</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
+                    quae.
+                </p>
+                <p class="food-price">Price: &#8377; 250</p>
+            </div>
+        </div>
+
+        <div class="food-menu-item">
+            <div class="food-img">
+                <img
+                        src="https://i.postimg.cc/sgzXPzzd/food-menu2.jpg"
+                        alt="error"
+                />
+            </div>
+            <div class="food-description">
+                <h2 class="food-titile">Food Menu Item 2</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
+                    quae.
+                </p>
+                <p class="food-price">Price: &#8377; 250</p>
+            </div>
+        </div>
+        <div class="food-menu-item">
+            <div class="food-img">
+                <img src="https://i.postimg.cc/8zbCtYkF/food-menu3.jpg" alt="" />
+            </div>
+            <div class="food-description">
+                <h2 class="food-titile">Food Menu Item 3</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
+                    quae.
+                </p>
+                <p class="food-price">Price: &#8377; 250</p>
+            </div>
+        </div>
+        <div class="food-menu-item">
+            <div class="food-img">
+                <img src="https://i.postimg.cc/Yq98p5Z7/food-menu4.jpg" alt="" />
+            </div>
+            <div class="food-description">
+                <h2 class="food-titile">Food Menu Item 4</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
+                    quae.
+                </p>
+                <p class="food-price">Price: &#8377; 250</p>
+            </div>
+        </div>
+        <div class="food-menu-item">
+            <div class="food-img">
+                <img src="https://i.postimg.cc/KYnDqxkP/food-menu5.jpg" alt="" />
+            </div>
+            <div class="food-description">
+                <h2 class="food-titile">Food Menu Item 5</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
+                    quae.
+                </p>
+                <p class="food-price">Price: &#8377; 250</p>
+            </div>
+        </div>
+        <div class="food-menu-item">
+            <div class="food-img">
+                <img src="https://i.postimg.cc/Jnxc8xQt/food-menu6.jpg" alt="" />
+            </div>
+            <div class="food-description">
+                <h2 class="food-titile">Food Menu Item 6</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
+                    quae.
+                </p>
+                <p class="food-price">Price: &#8377; 250</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="projects">
+    <h2 class="testimonial-title">These are my projects</h2>
+    <div class="testimonial-container container">
+        <div class="testimonial-box">
+            <div class="customer-detail">
+                <div class="customer-photo">
+                    <img src="https://www.creativefabrica.com/wp-content/uploads/2021/03/31/weather-icon-illustration03-Graphics-10205167-1.jpg" alt="project 1" />
+                    <p class="customer-name">Project 1 </p>
+                </div>
+            </div>
+            <div class="star-rating">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+            </div>
+            <p class="testimonial-text">
+                In this project I made a weather API call using javascript and i also used bootstrap for styling.
+            </p>
+
+        </div>
+        <div class="testimonial-box">
+            <div class="customer-detail">
+                <div class="customer-photo">
+                    <img
+                            src="https://i.postimg.cc/sxd2xCD2/female-photo1.jpg"
+                            alt=""
+                    />
+                    <p class="customer-name">Project 2</p>
+                </div>
+            </div>
+            <div class="star-rating">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+            </div>
+            <p class="testimonial-text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit
+                voluptas cupiditate aspernatur odit doloribus non.
+            </p>
+
+        </div>
+        <div class="testimonial-box">
+            <div class="customer-detail">
+                <div class="customer-photo">
+                    <img src="https://i.postimg.cc/fy90qvkV/male-photo3.jpg" alt="" />
+                    <p class="customer-name">Ben Roy</p>
+                </div>
+            </div>
+            <div class="star-rating">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+            </div>
+            <p class="testimonial-text">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit
+                voluptas cupiditate aspernatur odit doloribus non.
+            </p>
+
+        </div>
+    </div>
+</section>
+
+
+
+<section class="hidden">
+    <h1>Mark Ziegler</h1>
+    <p>This is my website</p>
+</section>
+
+<section>
+    <h2>Buy my products</h2>
+    <p class="hidden">
+        The things you own end up owning you.
+        It's only after we've lost everything that we're free to do anything.
+    </p>
+</section>
+
+<section>
+    <h2>It's really good</h2>
+    <div class="logo logos">
+        <div class="logo hidden">
+        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google">
+    </div>
+
+    <div class="logo hidden">
+        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google">
+    </div>
+
+    <div class="logo hidden">
+        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google">
+    </div>
+
+    <div class="logo hidden">
+        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google">
+    </div>
+
+    </div>
+</section>
+
 
 </body>
 </html>
