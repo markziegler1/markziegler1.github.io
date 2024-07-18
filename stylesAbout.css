@@ -1,0 +1,47 @@
+body {
+  background: #131316;
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2 {
+  color: #4a90e2;
+  margin: 1.5rem 0; /* Add margin to create separation between elements */
+}
+
+h1 {
+  font-size: 2.5rem; /* Adjust font size */
+}
+
+h2 {
+  font-size: 2rem; /* Adjust font size */
+}
+
+p {
+  line-height: 1.8; /* Adjust line height for better readability */
+  margin-bottom: 1.5rem; /* Add margin to create separation between paragraphs */
+  font-size: 1.2rem; /* Adjust font size */
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-bottom: 1.5rem; /* Add margin to create separation between lists and other elements */
+}
+
+ul li {
+  margin-bottom: 1rem; /* Add margin to create separation between list items */
+  font-size: 1.2rem; /* Adjust font size */
+}
+
+a {
+  color: #4a90e2;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
