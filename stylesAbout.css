@@ -9,32 +9,31 @@ body {
 h1,
 h2 {
   color: #4a90e2;
-  margin: 1.5rem 0; /* Add margin to create separation between elements */
+  margin: 1.5rem 0;
 }
 
 h1 {
-  font-size: 2.5rem; /* Adjust font size */
+  font-size: 2.5rem;
 }
 
 h2 {
-  font-size: 2rem; /* Adjust font size */
+  font-size: 2rem;
 }
 
-p {
-  line-height: 1.8; /* Adjust line height for better readability */
-  margin-bottom: 1.5rem; /* Add margin to create separation between paragraphs */
-  font-size: 1.2rem; /* Adjust font size */
+p,
+ul {
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
 }
 
 ul {
   list-style-type: disc;
   padding-left: 20px;
-  margin-bottom: 1.5rem; /* Add margin to create separation between lists and other elements */
 }
 
 ul li {
-  margin-bottom: 1rem; /* Add margin to create separation between list items */
-  font-size: 1.2rem; /* Adjust font size */
+  margin-bottom: 1rem;
 }
 
 a {
@@ -44,4 +43,46 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+.about-section {
+  padding-top: 80px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.card {
+  background: #1e1e24;
+  padding: 20px;
+  border-radius: 8px;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  transform: translateX(0);
 }
