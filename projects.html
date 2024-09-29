@@ -2,30 +2,35 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ziegler Project with Three.js</title>
 
-    <title>Mark Zieglers Portfolio</title>
+    <!-- Include Three.js and GSAP from a CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.136.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.136.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="navstyle.css" />
-    <script defer src="app.js"></script>
+    <link rel="stylesheet" href="/three/style.css" />
   </head>
   <body>
-    <nav class="navbar">
-      <div class="navbar-container container">
-        <input type="checkbox" name="" id="" />
-        <div class="hamburger-lines">
-          <span class="line line1"></span>
-          <span class="line line2"></span>
-          <span class="line line3"></span>
-        </div>
-        <ul class="menu-items">
-          <li><a href="/index.html">Home⭐️</a></li>
-          <li><a href="/about.html">About</a></li>
-          <li><a href="/projects.html">Projects</a></li>
-          <li><a href="/contact.html">Contact</a></li>
-        </ul>
-      </div>
+    <canvas class="webgl"></canvas>
+    <nav>
+      <a href="/">Home</a>
+      <ul>
+        <li>Explore resume</li>
+        <li>
+          <a
+            href="https://drive.google.com/file/d/15A5eMz3HkPi5DzAq5Cd0Fc-na44x-b0h/view?usp=sharing"
+            >Projects</a
+          >
+        </li>
+
+        <li>Create</li>
+      </ul>
     </nav>
+    <h1 class="title">Give it a spin</h1>
+
+    <!-- Include your main JavaScript file after the CDN dependencies -->
+    <script src="/three/main.js"></script>
   </body>
 </html>
