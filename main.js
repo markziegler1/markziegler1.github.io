@@ -56,9 +56,9 @@ controls.enableZoom = false;
 // Load textures for stars
 const loader = new THREE.TextureLoader();
 const starTextures = [
-  loader.load("three/star.png"),
-  loader.load("three/star2.png"),
-  loader.load("three/star3.png"),
+  loader.load("img/star.png"),
+  loader.load("img/star2.png"),
+  loader.load("img/star3.png"),
 ];
 
 // Generate star positions in a spherical distribution
@@ -147,4 +147,12 @@ window.addEventListener("mousemove", (event) => {
       b: newColor.b,
     });
   }
+});
+// Get the arrow button and the section to scroll to
+const arrowDown = document.getElementById("scroll-down");
+const nextSection = document.querySelector(".next-section");
+
+// Scroll event handler
+arrowDown.addEventListener("click", () => {
+  nextSection.scrollIntoView({ behavior: "smooth" });
 });
