@@ -75,6 +75,20 @@ nav ul {
   }
 }
 
+/* Hidden section */
+#next-section {
+  display: none; /* Keep this hidden initially */
+  position: fixed; /* Position fixed to take the whole screen */
+  top: 0; /* Cover the entire viewport */
+  left: 0; /* Cover the entire viewport */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background: none; /* No background color */
+  color: white; /* Text color */
+  opacity: 0; /* Start with zero opacity */
+  transition: opacity 1s ease-in-out; /* Smooth transition */
+}
+
 /* Hamburger menu styles for mobile */
 .hamburger {
   display: none;
@@ -130,14 +144,14 @@ nav ul {
   }
 
   nav ul {
-    display: none;
+    display: none; /* Hide the nav items initially */
   }
 
   .hamburger {
-    display: flex;
+    display: flex; /* Show the hamburger icon */
   }
 
   #nav-menu.active {
-    display: flex;
+    display: flex; /* Show the menu when active */
   }
 }

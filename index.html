@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/three@0.136.0/examples/js/controls/OrbitControls.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <canvas class="webgl"></canvas>
@@ -18,23 +18,14 @@
     <!-- Navigation -->
     <nav>
       <a href="/" class="logo">Home</a>
-      <!-- Hamburger menu icon (hidden on desktop, visible on mobile) -->
       <div class="hamburger" id="hamburger">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
       </div>
-
-      <!-- Navigation menu -->
       <ul id="nav-menu">
-        <li>
-          <a
-            href="https://drive.google.com/file/d/15A5eMz3HkPi5DzAq5Cd0Fc-na44x-b0h/view?usp=sharing"
-            target="_blank"
-          >
-            Explore resume
-          </a>
-        </li>
+        <li></li>
+
         <li>Projects</li>
         <li>Create</li>
       </ul>
@@ -42,20 +33,16 @@
 
     <h1 class="title">Give it a spin</h1>
 
+    <!-- Arrow down button -->
     <div class="arrow-down" id="scroll-down">↓</div>
 
-    <!-- Include your main JavaScript file after the CDN dependencies -->
-    <script src="/main.js"></script>
+    <!-- Hidden section to be revealed and scrolled to -->
+    <section id="next-section">
+      <h2>Next Section</h2>
+      <p>This section appears after clicking the arrow!</p>
+    </section>
 
-    <!-- JavaScript for the hamburger menu functionality -->
-    <script>
-      const hamburger = document.getElementById("hamburger");
-      const navMenu = document.getElementById("nav-menu");
-
-      hamburger.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
-        hamburger.classList.toggle("toggle");
-      });
-    </script>
+    <!-- Place script tags right before the closing body tag -->
+    <script src="main.js"></script>
   </body>
 </html>

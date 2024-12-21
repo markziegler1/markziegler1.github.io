@@ -1,9 +1,70 @@
+// Hamburger menu functionality
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("nav-menu");
+
+hamburger.addEventListener("click", () => {
+  navMenu.classList.toggle("active");
+  hamburger.classList.toggle("toggle");
+});
+
+// Scroll and reveal section on arrow click
+const scrollDownArrow = document.getElementById("scroll-down");
+const nextSection = document.getElementById("next-section");
+
+// Initially hide the next section
+nextSection.style.display = "none";
+
+scrollDownArrow.addEventListener("click", () => {
+  // Calculate the target position for the camera
+  const distance = 3; // Adjust the distance as needed for a closer zoom
+
+  // Get current rotation of the sphere
+  const currentRotation = mesh.rotation;
+
+  // Calculate new camera position based on the sphere's rotation
+  const targetPosition = new THREE.Vector3(
+    distance * Math.sin(currentRotation.y), // x position
+    distance * Math.sin(currentRotation.x), // y position
+    distance * Math.cos(currentRotation.y) // z position
+  );
+
+  // Animate camera movement to the target position
+  gsap.to(camera.position, {
+    duration: 1,
+    x: targetPosition.x,
+    y: targetPosition.y,
+    z: targetPosition.z,
+    onComplete: () => {
+      // Hide the arrow and make the section full screen
+      scrollDownArrow.style.display = "none";
+      nextSection.style.display = "block";
+
+      // Adjust the CSS to ensure it covers the entire screen
+      nextSection.style.position = "fixed";
+      nextSection.style.top = "0";
+      nextSection.style.left = "0";
+      nextSection.style.width = "100%";
+      nextSection.style.height = "100%";
+      nextSection.style.background = "none"; // Remove any background color
+
+      // Optional: You can add a transition effect here if needed
+      gsap.to(nextSection, {
+        opacity: 1,
+        duration: 1,
+      });
+    },
+  });
+});
+
 // Scene
 const scene = new THREE.Scene();
 
 // Sphere Geometry (for the planet)
 const geometry = new THREE.SphereGeometry(3, 64, 64);
-const material = new THREE.MeshStandardMaterial({ color: "#b3c9bf" });
+const material = new THREE.MeshStandardMaterial({
+  color: "#b3c9bf",
+  side: THREE.DoubleSide, // Makes sure the material is visible from inside
+});
 const mesh = new THREE.Mesh(geometry, material);
 scene.add(mesh);
 
@@ -28,12 +89,12 @@ scene.add(pointLight);
 
 // Camera
 const camera = new THREE.PerspectiveCamera(
-  45,
+  60,
   sizes.width / sizes.height,
   0.1,
   100
 );
-camera.position.set(0, 0, 20); // Keep the camera position as it is
+camera.position.set(0, 0, 10); // Start with the camera farther back
 scene.add(camera);
 
 // Renderer
@@ -49,8 +110,7 @@ mesh.receiveShadow = true;
 // Orbit Controls
 const controls = new THREE.OrbitControls(camera, canvas);
 controls.enableDamping = true;
-controls.autoRotate = true;
-controls.autoRotateSpeed = 2; // Adjusted for better visibility
+controls.autoRotate = false; // Disable auto-rotation when zoomed in
 controls.enableZoom = false;
 
 // Load textures for stars
@@ -147,12 +207,4 @@ window.addEventListener("mousemove", (event) => {
       b: newColor.b,
     });
   }
-});
-// Get the arrow button and the section to scroll to
-const arrowDown = document.getElementById("scroll-down");
-const nextSection = document.querySelector(".next-section");
-
-// Scroll event handler
-arrowDown.addEventListener("click", () => {
-  nextSection.scrollIntoView({ behavior: "smooth" });
 });
